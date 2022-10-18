@@ -1,3 +1,4 @@
+% time_domain_analysis 时域信号分析
 %%
 clear;clc;
 load('./DATA/data.mat');
@@ -17,8 +18,8 @@ for n = 1:145
     data(n).smcAC_pulse = data(n).smcAC_rms ./ data(n).smcAC_ma; % 脉冲因子
     % data(n).smcAC_fshape = data(n).smcAC_skewness ./ (data(n).smcAC_rms).^3; % 偏度因子
     data(n).smcAC_crest = data(n).smcAC_peak ./ data(n).smcAC_rms; % 峰值因子
-    data(n).smcAC_clearance  = data(n).smcAC_peak ./ data(n).smcAC_ra; % 裕度因子
-    
+    data(n).smcAC_clearance = data(n).smcAC_peak ./ data(n).smcAC_ra; % 裕度因子
+
     %% smcDC
     data(n).smcDC_ma = mean(abs(data(n).smcDC)); % 绝对均值
     data(n).smcDC_peak = max(abs(data(n).smcDC)); % 峰值
@@ -30,8 +31,8 @@ for n = 1:145
     data(n).smcDC_pulse = data(n).smcDC_rms ./ data(n).smcDC_ma; % 脉冲因子
     % data(n).smcDC_fshape = data(n).smcDC_skewness ./ (data(n).smcDC_rms).^3; % 偏度因子
     data(n).smcDC_crest = data(n).smcDC_peak ./ data(n).smcDC_rms; % 峰值因子
-    data(n).smcDC_clearance  = data(n).smcDC_peak ./ data(n).smcDC_ra; % 裕度因子
-    
+    data(n).smcDC_clearance = data(n).smcDC_peak ./ data(n).smcDC_ra; % 裕度因子
+
     %% vib_table
     data(n).vib_table_ma = mean(abs(data(n).vib_table)); % 绝对均值
     data(n).vib_table_peak = max(abs(data(n).vib_table)); % 峰值
@@ -43,8 +44,8 @@ for n = 1:145
     data(n).vib_table_pulse = data(n).vib_table_rms ./ data(n).vib_table_ma; % 脉冲因子
     % data(n).vib_table_fshape = data(n).vib_table_skewness ./ (data(n).vib_table_rms).^3; % 偏度因子
     data(n).vib_table_crest = data(n).vib_table_peak ./ data(n).vib_table_rms; % 峰值因子
-    data(n).vib_table_clearance  = data(n).vib_table_peak ./ data(n).vib_table_ra; % 裕度因子
-    
+    data(n).vib_table_clearance = data(n).vib_table_peak ./ data(n).vib_table_ra; % 裕度因子
+
     %% vib_spindle
     data(n).vib_spindle_ma = mean(abs(data(n).vib_spindle)); % 绝对均值
     data(n).vib_spindle_peak = max(abs(data(n).vib_spindle)); % 峰值
@@ -56,8 +57,8 @@ for n = 1:145
     data(n).vib_spindle_pulse = data(n).vib_spindle_rms ./ data(n).vib_spindle_ma; % 脉冲因子
     % data(n).vib_spindle_fshape = data(n).vib_spindle_skewness ./ (data(n).vib_spindle_rms).^3; % 偏度因子
     data(n).vib_spindle_crest = data(n).vib_spindle_peak ./ data(n).vib_spindle_rms; % 峰值因子
-    data(n).vib_spindle_clearance  = data(n).vib_spindle_peak ./ data(n).vib_spindle_ra; % 裕度因子
-    
+    data(n).vib_spindle_clearance = data(n).vib_spindle_peak ./ data(n).vib_spindle_ra; % 裕度因子
+
     %% AE_table
     data(n).AE_table_ma = mean(abs(data(n).AE_table)); % 绝对均值
     data(n).AE_table_peak = max(abs(data(n).AE_table)); % 峰值
@@ -69,8 +70,8 @@ for n = 1:145
     data(n).AE_table_pulse = data(n).AE_table_rms ./ data(n).AE_table_ma; % 脉冲因子
     % data(n).AE_table_fshape = data(n).AE_table_skewness ./ (data(n).AE_table_rms).^3; % 偏度因子
     data(n).AE_table_crest = data(n).AE_table_peak ./ data(n).AE_table_rms; % 峰值因子
-    data(n).AE_table_clearance  = data(n).AE_table_peak ./ data(n).AE_table_ra; % 裕度因子
-    
+    data(n).AE_table_clearance = data(n).AE_table_peak ./ data(n).AE_table_ra; % 裕度因子
+
     %% AE_spindle
     data(n).AE_spindle_ma = mean(abs(data(n).AE_spindle)); % 绝对均值
     data(n).AE_spindle_peak = max(abs(data(n).AE_spindle)); % 峰值
@@ -82,8 +83,8 @@ for n = 1:145
     data(n).AE_spindle_pulse = data(n).AE_spindle_rms ./ data(n).AE_spindle_ma; % 脉冲因子
     % data(n).AE_spindle_fshape = data(n).AE_spindle_skewness ./ (data(n).AE_spindle_rms).^3; % 偏度因子
     data(n).AE_spindle_crest = data(n).AE_spindle_peak ./ data(n).AE_spindle_rms; % 峰值因子
-    data(n).AE_spindle_clearance  = data(n).AE_spindle_peak ./ data(n).AE_spindle_ra; % 裕度因子
-    
+    data(n).AE_spindle_clearance = data(n).AE_spindle_peak ./ data(n).AE_spindle_ra; % 裕度因子
+
 end
 
-save data;
+save time_domain_analysis;
