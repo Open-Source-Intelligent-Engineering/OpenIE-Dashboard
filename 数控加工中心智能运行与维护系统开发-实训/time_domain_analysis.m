@@ -6,7 +6,7 @@ load('./DATA/data.mat');
 %%
 for n = 1:145
     % smcAC, smcDC, vib_table, vib_spindle, AE_table, AE_spindle
-    % 时域特征 绝对均值， 峰值， 均方根值， 方根辐值， 歪度值， 峭度值， 波形因子， 脉冲因子， 偏度因子， 峰值因子， 裕度因子
+    % 时域特征 绝对均值， 峰值， 均方根值， 方根幅值， 歪度值， 峭度值， 波形因子， 脉冲因子， 偏度因子， 峰值因子， 裕度因子
     %% smcAC
     data(n).smcAC_ma = mean(abs(data(n).smcAC)); % 绝对均值
     data(n).smcAC_peak = max(abs(data(n).smcAC)); % 峰值
@@ -87,4 +87,8 @@ for n = 1:145
 
 end
 
+%%
+% 删掉6个信号
+data = rmfield(data, {'smcAC', 'AE_spindle', 'smcDC', 'vib_table', 'vib_spindle', 'AE_table'});
+% 保存数据
 save time_domain_analysis;
