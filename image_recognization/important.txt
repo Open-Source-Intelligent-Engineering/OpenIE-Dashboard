@@ -1,0 +1,3 @@
+python train.py --data ../qianzehao/data.yml --cfg models/yolov5s.yaml --batch-size 8
+
+python detect.py --source E:\\Code\\yolo\\qianzehao\\test\\images\\1.jpg --weights C:\\Users\\qianzehao\\Downloads\\content\\yolov5\\runs\\train\\exp\\weights\\best.pt --output ../qianzehao/output
