@@ -1,0 +1,17 @@
+{{title.DATA}}
+
+直盘汇率
+USD-CNY：{{USDCNY.DATA}}
+EUR-CNY：{{EURCNY.DATA}}
+CNY-JPY：{{CNYJPY.DATA}}
+EUR-USD：{{EURUSD.DATA}}
+
+黄金
+上海黄金交所：{{GOLD.DATA}}
+黄金期货：{{Gold_stock.DATA}}
+
+ETH-USDT(永续)：1353.0
+BTC-USDT(永续)：20179
+
+{{data.DATA}}
+-- By 自由韭菜量化基金会
