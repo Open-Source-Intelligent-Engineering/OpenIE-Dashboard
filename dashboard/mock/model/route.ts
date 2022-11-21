@@ -11,7 +11,7 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
           component: 'self',
           meta: {
             // title: '分析页',
-            title: 'Logistics Analysis',
+            title: 'CNC Analysis',
             requiresAuth: true,
             icon: 'icon-park-outline:analysis'
           }
@@ -22,7 +22,7 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
           component: 'self',
           meta: {
             // title: '工作台',
-            title: 'Work Bench',
+            title: 'Product Plan',
             requiresAuth: true,
             icon: 'icon-park-outline:workbench'
           }
@@ -45,7 +45,47 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
           path: '/document/map',
           component: 'self',
           meta: {
-            title: 'MapShows',
+            title: 'Logistic Map',
+            requiresAuth: true,
+            icon: 'icon-park-outline:analysis'
+          }
+        },
+        {
+          name: 'document_convertio',
+          path: '/document/convertio',
+          component: 'self',
+          meta: {
+            title: 'Convertio',
+            requiresAuth: true,
+            icon: 'icon-park-outline:analysis'
+          }
+        },
+        {
+          name: 'document_mermaid',
+          path: '/document/mermaid',
+          component: 'self',
+          meta: {
+            title: 'Mermaid UML',
+            requiresAuth: true,
+            icon: 'icon-park-outline:analysis'
+          }
+        },
+        {
+          name: 'document_strain',
+          path: '/document/strain',
+          component: 'self',
+          meta: {
+            title: 'Strain',
+            requiresAuth: true,
+            icon: 'icon-park-outline:analysis'
+          }
+        },
+        {
+          name: 'document_wolframcloud',
+          path: '/document/wolframcloud',
+          component: 'self',
+          meta: {
+            title: 'Wolframcloud',
             requiresAuth: true,
             icon: 'icon-park-outline:analysis'
           }
@@ -114,7 +154,7 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
       ],
       meta: {
         // title: '文档',
-        title: 'MapShow & Doc',
+        title: 'Doc & Toolbox',
         icon: 'mdi:file-document-multiple-outline',
         order: 2
       }
@@ -547,7 +587,7 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
           component: 'self',
           meta: {
             // title: '分析页',
-            title: 'Logistics Analysis',
+            title: 'CNC Analysis',
             requiresAuth: true,
             icon: 'icon-park-outline:analysis'
           }
@@ -558,7 +598,7 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
           component: 'self',
           meta: {
             // title: '工作台',
-            title: 'Work Bench',
+            title: 'Product Plan',
             requiresAuth: true,
             icon: 'icon-park-outline:workbench'
           }
@@ -1051,7 +1091,7 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
           component: 'self',
           meta: {
             // title: '分析页',
-            title: 'Logistics Analysis',
+            title: 'CNC Analysis',
             requiresAuth: true,
             icon: 'icon-park-outline:analysis'
           }
