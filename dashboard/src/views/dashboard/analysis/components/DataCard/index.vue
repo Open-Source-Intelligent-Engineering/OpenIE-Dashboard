@@ -34,16 +34,16 @@ interface CardData {
 const cardData: CardData[] = [
   {
     id: 'visit',
-    title: 'Index 1',
-    value: 1000000,
+    title: '今日生产计划',
+    value: 5000,
     unit: '',
     colors: ['#ec4786', '#b955a4'],
     icon: 'ant-design:bar-chart-outlined'
   },
   {
     id: 'amount',
-    title: 'Index 2',
-    value: 234567.89,
+    title: '累计加工残次品',
+    value: 23,
     unit: '',
     // unit: '$',
     colors: ['#865ec0', '#5144b4'],
@@ -51,16 +51,16 @@ const cardData: CardData[] = [
   },
   {
     id: 'download',
-    title: 'Index 3',
-    value: 666666,
+    title: '金刚石刀具库存',
+    value: 36,
     unit: '',
     colors: ['#56cdf3', '#719de3'],
     icon: 'carbon:document-download'
   },
   {
     id: 'trade',
-    title: 'Index 4',
-    value: 999999,
+    title: '陶瓷刀具库存',
+    value: 79,
     unit: '',
     colors: ['#fcbc25', '#f68057'],
     icon: 'ant-design:trademark-circle-outlined'

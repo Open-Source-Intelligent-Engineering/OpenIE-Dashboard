@@ -5,15 +5,15 @@
         <div class="flex w-full h-360px">
           <div class="w-200px h-full py-12px">
             <h3 class="text-16px font-bold">Dashboard Overview</h3>
-            <p class="text-[#aaa]">Influence Index Analysis</p>
+            <p class="text-[#aaa]">刀具磨损量预测曲线</p>
             <h3 class="pt-36px text-24px font-bold">
-              <count-to prefix="" :start-value="0" :end-value="7754" />
+              <count-to prefix="" :start-value="0" :end-value="77.54" />
             </h3>
-            <p class="text-[#aaa]">Overview of 2022</p>
+            <p class="text-[#aaa]">一号加工中心刀具磨损量</p>
             <h3 class="pt-36px text-24px font-bold">
-              <count-to :start-value="0" :end-value="1234" />
+              <count-to :start-value="0" :end-value="86" />
             </h3>
-            <p class="text-[#aaa]">Overview of 2021</p>
+            <p class="text-[#aaa]">二号加工中心刀具磨损量</p>
             <n-button class="mt-24px" type="primary">Summary Part</n-button>
           </div>
           <div class="flex-1-hidden h-full">
@@ -48,7 +48,7 @@ const lineOptions = ref<ECOption>({
     }
   },
   legend: {
-    data: ['index1', 'index2']
+    data: ['1号机床', '2号机床']
   },
   grid: {
     left: '3%',
@@ -71,7 +71,7 @@ const lineOptions = ref<ECOption>({
   series: [
     {
       color: '#8e9dff',
-      name: 'index1',
+      name: '1号机床',
       type: 'line',
       smooth: true,
       stack: 'Total',
@@ -101,7 +101,7 @@ const lineOptions = ref<ECOption>({
     },
     {
       color: '#26deca',
-      name: 'index2',
+      name: '2号机床',
       type: 'line',
       smooth: true,
       stack: 'Total',
@@ -147,7 +147,7 @@ const pieOptions = ref<ECOption>({
   series: [
     {
       color: ['#5da8ff', '#8e9dff', '#fedc69', '#26deca'],
-      name: 'Proportion of data',
+      name: '加工中心刀具退化程度',
       type: 'pie',
       radius: ['45%', '75%'],
       avoidLabelOverlap: false,
@@ -170,10 +170,10 @@ const pieOptions = ref<ECOption>({
         show: false
       },
       data: [
-        { value: 20, name: 'Yibin' },
-        { value: 10, name: 'LuZhou' },
-        { value: 30, name: 'ChongQing' },
-        { value: 40, name: 'YiChang' }
+        { value: 20, name: '退化程度10%' },
+        { value: 10, name: '退化程度25%' },
+        { value: 30, name: '退化程度35%' },
+        { value: 40, name: '退化程度50%' }
       ]
     }
   ]
