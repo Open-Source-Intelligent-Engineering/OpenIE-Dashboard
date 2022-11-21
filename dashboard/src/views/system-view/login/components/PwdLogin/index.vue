@@ -53,8 +53,8 @@ const formRef = ref<HTMLElement & FormInst>();
 const model = reactive({
   // userName: 'Soybean',
   // password: 'soybean123',
-  userName: 'CIEG',
-  password: 'cieg123'
+  userName: 'QianZehao',
+  password: '123456Qzh'
 });
 
 const rules: FormRules = {
