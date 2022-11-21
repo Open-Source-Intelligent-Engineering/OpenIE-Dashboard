@@ -117,11 +117,11 @@ interface Activity {
 }
 
 const activity: Activity[] = [
-  { id: 4, content: 'Soybean 刚才把工作台页面随便写了一些，凑合能看了！hhh', time: '2021-11-07 22:45:32' },
-  { id: 3, content: 'Soybean 正在忙于为soybean-admin写项目说明文档！', time: '2021-11-03 20:33:31' },
-  { id: 2, content: 'Soybean 准备为soybean-admin 1.0的发布做充分的准备工作！', time: '2021-10-31 22:43:12' },
-  { id: 1, content: '@yanbowe 向soybean-admin提交了一个bug，多标签栏不会自适应。', time: '2021-10-27 10:24:54' },
-  { id: 0, content: 'Soybean 在2021年5月28日创建了开源项目soybean-admin！', time: '2021-05-28 22:22:22' }
+  { id: 4, content: '今日生产计划已下达，请注意查收', time: '2022-11-07 22:45:32' },
+  { id: 3, content: '2号机器刀具磨损即将达到阈值，请及时通知工人更换刀具', time: '2022-11-03 20:33:31' },
+  { id: 2, content: 'OpenIE 新系统即将上线！', time: '2022-10-31 22:43:12' },
+  { id: 1, content: '17号机器刀具磨损即将达到阈值，请及时通知工人更换刀具', time: '2022-10-27 10:24:54' },
+  { id: 0, content: '今日生产报告已自动生成，点击查看', time: '2022-05-28 22:22:22' }
 ];
 
 interface Shortcuts {
@@ -133,11 +133,11 @@ interface Shortcuts {
 
 const shortcuts: Shortcuts[] = [
   { id: 0, label: '主控台', icon: 'mdi:desktop-mac-dashboard', iconColor: '#409eff' },
-  { id: 1, label: '系统管理', icon: 'ic:outline-settings', iconColor: '#7238d1' },
-  { id: 2, label: '权限管理', icon: 'mdi:family-tree', iconColor: '#f56c6c' },
-  { id: 3, label: '组件', icon: 'fluent:app-store-24-filled', iconColor: '#19a2f1' },
-  { id: 4, label: '表格', icon: 'mdi:table-large', iconColor: '#fab251' },
-  { id: 5, label: '图表', icon: 'mdi:chart-areaspline', iconColor: '#8aca6b' }
+  { id: 1, label: '机床传感器', icon: 'ic:outline-settings', iconColor: '#7238d1' },
+  { id: 2, label: '人事管理', icon: 'mdi:family-tree', iconColor: '#f56c6c' },
+  { id: 3, label: '小程序', icon: 'fluent:app-store-24-filled', iconColor: '#19a2f1' },
+  { id: 4, label: '生产计划', icon: 'mdi:table-large', iconColor: '#fab251' },
+  { id: 5, label: '机床数据分析', icon: 'mdi:chart-areaspline', iconColor: '#8aca6b' }
 ];
 </script>
 
