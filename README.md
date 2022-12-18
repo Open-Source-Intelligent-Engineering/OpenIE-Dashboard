@@ -20,44 +20,6 @@ https://github.com/QianZeHao123/OpenIE-Algorithm/tree/main/nc_machining_center/D
 我们团队使用Matlab编写绘制了所有输出信号的脚本，用于人工筛选可以用来被训练的数据。在mill.mat文件中，共收集有167组数据，其中有21组数据中缺少刀具磨损量VB，因此不能被列入训练集，同时还有一组数据通过图像发现AC/DC电压出现 $ 10^{29} $ 异常，可能是由于信号传感器出现问题。经过人工观察图像筛选训练用信号，共有145组可被用于训练集。
 https://github.com/QianZeHao123/OpenIE-Algorithm/blob/main/nc_machining_center/draw_pic.m<br><br>
 
-## 特征工程
-### 信号处理
-#### 时域特征提取
-对于时域特征的提取，我们将有量纲特征值与无量纲特征值相结合，以时间为自变量表示目标信号数据的波形，具体特征如下：
-$$ $$
-绝对均值：
-$$ |\bar{x}|=\frac{1}{N} \sum_{i=1}^{N}\left|x_{i}\right| $$
-峰值：
-$$ x_{pesk}=X_{max} $$
-均方根值：
-$$ x_{rms}=\sqrt{\frac{1}{N} \sum_{k=1}^{N} x_{i}^{2}} $$
-方根幅值：
-$$ x_{kurtosis}=\frac{1}{N} \sum_{k=1}^{N}(\pi)^{n} $$
-峭度值：
-$$ x_{ra}=\left(\frac{1}{N} \sum_{i=1}^{N} \sqrt{|x_i|}\right)^{2} $$
-波形因子：
-$$ f_{shape}=\frac{x_{rms}}{|\bar{x}|} $$
-脉冲因子：
-$$ f_{pulse}=\frac{x_{peak}}{|x|} $$
-峰值因子：
-$$ f_{crest}=\frac{x_{peak}}{x_{rms}} $$
-裕度因子：
-$$ f_{celearance}=\frac{x_{peak}}{x_{ra}} $$
-
-但是只有时域特征的铣削力存在波动较大以及不同刀具差异较大的情况，因此，只有时域特征不够完善，需进一步建立频域和时频域的特征提取。<br><br>
-
-#### 频域特征提取
-我们采取频谱分析法提取铣刀切削原始信号的频域特征，具体特征如下：<br><br>
-$$$$
-重心频率：
-$$ F_{FC}=\frac{\int_{0}^{+\infty}f(t)FFT(t)dt}{\int_{0}^{+\infty} FFT(t)dt} $$
-均方频率：
-$$ F_{MSF}=\frac{\int_{0}^{+\infty} FFT(t)f(t)^{2}dt}{\int_{0}^{+\infty}FFT(t)dt} $$
-均方根频率：
-$$ F_{RMSF}=\sqrt{\frac{\int_{0}^{+\infty}FFT(t)f(t)^{2}dt}{\int_{0}^{+\infty}FFT(t)dt}} $$
-频率方差：
-$$ F_{VF}=\frac{\int_{0}^{+\infty}(f(t)-\frac{\int_{0}^{+\infty}f(t)FFT(t)dt}{\int_{0}^{+\infty}FFT(t)dt} )^{2}dt}{\int_{0}^{+\infty}FFT(t)dt}  $$
-
 ### 特征筛选
 ## BPNN反向传递神经网络模型
 ## 结果展示与分析
